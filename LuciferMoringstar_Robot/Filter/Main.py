@@ -33,7 +33,7 @@ async def filter(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("📢 Join Updates Channel 📢", url=invite_link.invite_link)
+                            InlineKeyboardButton("📣 Join Updates Channel 📣", url=invite_link.invite_link)
                         ]
                     ]
                 ),
@@ -134,12 +134,13 @@ async def group(client, message):
             chat_id = message.chat.id,
             text=f"""
 👋Hey {message.from_user.mention}
-If this movie is not in our database you will not get that movie..
-Otherwise, the spelling of the name of the requested movie may not be correct...
-So you go to google and check the spelling of the name of the movie you want.
-ഈ സിനിമ ഞങ്ങളുടെ ഡാറ്റാബേസിൽ ഇല്ലെങ്കിൽ നിങ്ങൾക്ക് ഈ സിനിമ ലഭിക്കില്ല
-അല്ലെങ്കിൽ, അഭ്യർത്ഥിച്ച സിനിമയുടെ പേരിന്റെ അക്ഷരവിന്യാസം ശരിയായിരിക്കില്ല ...
-അതിനാൽ നിങ്ങൾ ഗൂഗിളിൽ പോയി നിങ്ങൾക്ക് ആവശ്യമുള്ള സിനിമയുടെ പേരിന്റെ സ്പെല്ലിംഗ് പരിശോധിക്കുക""",
+Sorry, No Movie/Series Related to the Given Word Was Found 🥺
+
+Please Go to Google and Confirm the Correct Spelling 🙏
+ക്ഷമിക്കണം, നൽകിയ വാക്കുമായി ബന്ധപ്പെട്ട സിനിമ/സീരീസ് ഇല്ല   
+
+ദയവായി Google- ലേക്ക് പോയി ശരിയായ അക്ഷരവിന്യാസം സ്ഥിരീകരിക്കുക""",
+
             parse_mode="html",
             reply_to_message_id=message.message_id
         )
@@ -289,8 +290,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 return
         elif query.data == "help":
             buttons = [[
-                InlineKeyboardButton('Update Channel', url='t.me/Mo_Tech_YT'),
-                InlineKeyboardButton('Source Code', url="https://github.com/PR0FESS0R-99/LuciferMoringstar_Robot")
+                InlineKeyboardButton('Update Channel', url='https://t.me/FM_Update'),
+                InlineKeyboardButton('Source Code', url="https://github.com/Salman-Faris-10/SalmanulFaris")
                 ],[
                 InlineKeyboardButton('💫Deploy Video💫', url=f'{TUTORIAL}')
                 ]]
@@ -299,8 +300,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "about":
             buttons = [
                 [
-                    InlineKeyboardButton('Update Channel', url='t.me/Mo_Tech_YT'),
-                    InlineKeyboardButton('Source Code', url=f'{TUTORIAL}')
+                    InlineKeyboardButton('Update Channel', url='https://t.me/FM_Update'),
+                    InlineKeyboardButton('Source Code', url="https://github.com/Salman-Faris-10/SalmanulFaris")
                 ]
                 ]
             await query.message.edit(text=f"{ABOUT}".format(TUTORIAL), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
@@ -323,7 +324,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('💫 DEPLOY VIDEO 💫', url=f'{TUTORIAL}')
+                        InlineKeyboardButton('💫 Boss 💫', url='https://t.me/FM_Admin_owner')
                     ]
                     ]
                 
@@ -354,7 +355,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{title}"
                 buttons = [
                     [
-                        InlineKeyboardButton('🖥️ How To Own 🖥️', url=f'{TUTORIAL}')
+                        InlineKeyboardButton('🎪 Search Group 🎪', url='https://t.me/FM_FilmMania')
                     ]
                     ]
                 
@@ -370,4 +371,4 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "pages":
             await query.answer()
     else:
-        await query.answer("കൌതുകും ലേശം കൂടുതൽ ആണല്ലേ👀",show_alert=True)
+        await query.answer("നീ ആള് കൊള്ളാലോ 👀. ഇ movie വേണമെങ്കിൽ പോയി search ചെയ്യാ 👇. Are You Crzy 😠.If you want this movie, go and search 👇",show_alert=True)
