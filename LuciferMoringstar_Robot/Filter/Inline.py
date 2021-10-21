@@ -89,10 +89,10 @@ async def answer(bot, query):
 
 def get_reply_markup(query):
     buttons = [[
-        InlineKeyboardButton('Support Group', url='https://t.me/FM_FilmMania'),
-        InlineKeyboardButton('New Movies', url='https://t.me/FM_FilmMania')
+        InlineKeyboardButton('Support Group', url='https://t.me/SKMMovieWorld'),
+        InlineKeyboardButton('➕ ᗩᗪᗪ ᗰE TO YOᑌᖇ GᖇOᑌᑭᑭ ➕', url='https://t.me/SKM_Movis_World_Bot?startgroup=true')
         ],[
-        InlineKeyboardButton('💡 Join Now 💡', url='https://t.me/FM_Update')
+        InlineKeyboardButton('💡 Join Now 💡', url='https://t.me/SKMMovieWorld')
         ],[
         InlineKeyboardButton('🔍 Search again 🔎', switch_inline_query_current_chat=query)
         ]]
