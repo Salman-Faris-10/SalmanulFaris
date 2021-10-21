@@ -290,17 +290,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 return
         elif query.data == "help":
             buttons = [[
-                InlineKeyboardButton('Update Channel', url='https://t.me/FM_Update'),
+                InlineKeyboardButton('Updater', url='https://t.me/JustinJaise'),
                 InlineKeyboardButton('Source Code', url="https://github.com/Salman-Faris-10/SalmanulFaris")
                 ],[
-                InlineKeyboardButton('💫Deploy Video💫', url=f'{TUTORIAL}')
+                InlineKeyboardButton('💫Deploy💫', url='https://telegra.ph/file/75166c6ef219b186d8da8.jpg')
                 ]]
             await query.message.edit(text=f"{HELP}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
         elif query.data == "about":
             buttons = [
                 [
-                    InlineKeyboardButton('Update Channel', url='https://t.me/FM_Update'),
+                    InlineKeyboardButton('മൊതലാളി', url='https://t.me/JustinJaise'),
                     InlineKeyboardButton('Source Code', url="https://github.com/Salman-Faris-10/SalmanulFaris")
                 ]
                 ]
@@ -355,7 +355,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{title}"
                 buttons = [
                     [
-                        InlineKeyboardButton('🎪 Search Group 🎪', url='https://t.me/FM_FilmMania')
+                        InlineKeyboardButton('🎪 Search Group 🎪', url='https://t.me/SKMMovieWorld')
                     ]
                     ]
                 
